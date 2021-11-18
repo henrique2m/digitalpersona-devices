@@ -1,8 +1,12 @@
-/// <reference types="WebSdk" />
-import { Base64UrlString } from '@digitalpersona/core';
-import { AuthenticationData, IAuthenticationClient, AuthenticationHandle } from '@digitalpersona/services';
-import { Handler, MultiCastEventSource } from '../../private';
-import { Event, CommunicationFailed } from '../../common';
+/// <reference path="../../../../@types/WebSdk/index.d.ts" />
+import { Base64UrlString } from "@digitalpersona/core";
+import {
+    AuthenticationData,
+    IAuthenticationClient,
+    AuthenticationHandle,
+} from "@digitalpersona/services";
+import { Handler, MultiCastEventSource } from "../../private";
+import { Event, CommunicationFailed } from "../../common";
 /**
  * Integrated Windows Authentication API.
  * An instance of this class allows internet browsers to authenticate in DigitalPersona servers
@@ -10,7 +14,10 @@ import { Event, CommunicationFailed } from '../../common';
  * The IWA API uses DigitalPersona WebSDK to communicate with Windwows operating system and extract
  * Windows account data for authentication.
  */
-export declare class WindowsAuthClient extends MultiCastEventSource implements IAuthenticationClient {
+export declare class WindowsAuthClient
+    extends MultiCastEventSource
+    implements IAuthenticationClient
+{
     /** A WebSdk channel. */
     private channel;
     /**
@@ -58,7 +65,10 @@ export declare class WindowsAuthClient extends MultiCastEventSource implements I
     /** Used internally. Do not call this method. */
     init(): Promise<AuthenticationData>;
     /** Used internally. Do not call this method. */
-    continue(handle: AuthenticationHandle, data: string): Promise<Base64UrlString>;
+    continue(
+        handle: AuthenticationHandle,
+        data: string
+    ): Promise<Base64UrlString>;
     /** Used internally. Do not call this method. */
     term(handle: AuthenticationHandle): Promise<void>;
     /** Converts WebSdk connectivity error to an IWA API event. */

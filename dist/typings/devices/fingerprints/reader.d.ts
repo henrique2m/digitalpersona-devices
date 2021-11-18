@@ -1,10 +1,16 @@
-/// <reference types="WebSdk" />
-import { Handler, MultiCastEventSource } from '../../private';
-import { Event, CommunicationFailed } from '../../common';
-import { DeviceConnected, DeviceDisconnected } from '../events';
-import { ErrorOccurred, SamplesAcquired, QualityReported, AcquisitionStarted, AcquisitionStopped } from './events';
-import { DeviceInfo } from './device';
-import { SampleFormat } from './sample';
+/// <reference path="../../../../@types/WebSdk/index.d.ts" />
+import { Handler, MultiCastEventSource } from "../../private";
+import { Event, CommunicationFailed } from "../../common";
+import { DeviceConnected, DeviceDisconnected } from "../events";
+import {
+    ErrorOccurred,
+    SamplesAcquired,
+    QualityReported,
+    AcquisitionStarted,
+    AcquisitionStopped,
+} from "./events";
+import { DeviceInfo } from "./device";
+import { SampleFormat } from "./sample";
 /**
  * A fingerprint reader API.
  * An instance of this class allows to subscribe to finerprint reader events and read fingerprint data.
@@ -122,7 +128,10 @@ export declare class FingerprintReader extends MultiCastEventSource {
      * When a finger is placed, a {@link QualityReported} event will report a scan quality,
      * and a {@link SamplesAcquired} event will return a scanned sample in case of a successful scan.
      */
-    startAcquisition(sampleFormat: SampleFormat, deviceUid?: string): Promise<void>;
+    startAcquisition(
+        sampleFormat: SampleFormat,
+        deviceUid?: string
+    ): Promise<void>;
     /** Deactivates a fingerprint acquisition mode.
      * This call will produce a {@link AcquisitionStopped} event if deactivation was successful.
      * After that the reader will stop waiting for a finger.

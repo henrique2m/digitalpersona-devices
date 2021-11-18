@@ -1,9 +1,9 @@
-/// <reference types="WebSdk" />
-import { Handler, MultiCastEventSource } from '../../private';
-import { Event, CommunicationFailed } from '../../common';
-import { DeviceConnected, DeviceDisconnected } from '../events';
-import { CardInserted, CardRemoved } from './events';
-import { Card } from './cards';
+/// <reference path="../../../../@types/WebSdk/index.d.ts" />
+import { Handler, MultiCastEventSource } from "../../private";
+import { Event, CommunicationFailed } from "../../common";
+import { DeviceConnected, DeviceDisconnected } from "../events";
+import { CardInserted, CardRemoved } from "./events";
+import { Card } from "./cards";
 /**
  * A card reader API class.
  * An instance of this class allows to subscribe to card reader events and read card data.

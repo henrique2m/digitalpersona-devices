@@ -4,7 +4,7 @@
     "module": "commonjs",
     "outDir": "dist/typings",
     "lib": ["dom", "es2015", "es2015.promise"],
-    "typeRoots": ["node_modules/@types", "types"],
+    "typeRoots": ["node_modules/@types"],
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {

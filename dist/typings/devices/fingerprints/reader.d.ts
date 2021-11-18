@@ -1,4 +1,4 @@
-/// <reference path="../../../../@types/WebSdk/index.d.ts" />
+/// <reference path="../../../../types/WebSdk/index.d.ts" />
 import { Handler, MultiCastEventSource } from "../../private";
 import { Event, CommunicationFailed } from "../../common";
 import { DeviceConnected, DeviceDisconnected } from "../events";

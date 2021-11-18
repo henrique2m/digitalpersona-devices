@@ -3,15 +3,12 @@
     "target": "es5",
     "module": "commonjs",
     "outDir": "dist/typings",
-    "lib": ["dom", "es2015", "es2015.promise" ],
-    "typeRoots": [
-      "node_modules/@types",
-      "./@types"
-    ],
+    "lib": ["dom", "es2015", "es2015.promise"],
+    "typeRoots": ["node_modules/@types", "types"],
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
-      "*": [ "@types/*" ]
+      "*": ["types/*"]
     },
 
     "emitDeclarationOnly": true,
@@ -30,15 +27,12 @@
     "strictNullChecks": true,
     "downlevelIteration": true
   },
-  "files": [ "src/index.ts" ],
+  "files": ["src/index.ts"],
   // "include": [
   //   "src",
   //   "@types"
   // ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
+  "exclude": ["node_modules", "dist"],
   "typedocOptions": {
     "mode": "file",
     "out": "dist/docs",
@@ -53,6 +47,12 @@
     "stripInternal": true,
     "ignoreCompilerErrors": true,
     "readme": "none",
-    "exclude": [ "node_modules", "**/examples/**/*", "**/*.spec.ts", "**/private/**/*", "**/workflows/**/*" ]
+    "exclude": [
+      "node_modules",
+      "**/examples/**/*",
+      "**/*.spec.ts",
+      "**/private/**/*",
+      "**/workflows/**/*"
+    ]
   }
 }

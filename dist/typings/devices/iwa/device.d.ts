@@ -1,4 +1,4 @@
-/// <reference path="../../../../@types/WebSdk/index.d.ts" />
+/// <reference path="../../../../types/WebSdk/index.d.ts" />
 import { Base64UrlString } from "@digitalpersona/core";
 import {
     AuthenticationData,
